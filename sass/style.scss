@@ -1,0 +1,172 @@
+@import './colors';
+
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+body {
+	overflow: hidden;
+	height: 100vh;
+	background-color: $White;
+	font-size: 18px;
+	font-family: 'Hanken Grotesk', sans-serif;
+}
+
+.Card {
+	&__main {
+		position: relative;
+		z-index: 10;
+		text-align: center;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		height: 350px;
+		max-width: 1000px;
+		background: rgb(120, 87, 255);
+		background: linear-gradient(
+			180deg,
+			rgba(120, 87, 255, 1) 0%,
+			rgba(46, 43, 233, 1) 100%
+		);
+		border-bottom-left-radius: 30px;
+		border-bottom-right-radius: 30px;
+	}
+	&__Result {
+		margin: 20px 0;
+		color: hsl(241, 100%, 89%);
+		font-size: 1.2rem;
+	}
+	&__score {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		height: 130px;
+		width: 130px;
+		background: rgb(78, 33, 202);
+		background: linear-gradient(
+			180deg,
+			rgba(78, 33, 202, 1) 0%,
+			rgba(36, 33, 202, 0) 100%
+		);
+		border-radius: 50%;
+		h1 {
+			font-size: 3.2rem;
+			color: $White;
+		}
+		h2 {
+			color: $Lightlavender;
+			font-size: 1rem;
+		}
+	}
+	&__info {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		h2 {
+			margin: 20px 0 10px;
+			color: $White;
+		}
+		p {
+			color: $Lightlavender;
+			width: 270px;
+			font-size: 1rem;
+		}
+	}
+
+	&__stats {
+		z-index: 1;
+		position: relative;
+		top: -30px;
+		background-color: $White;
+		font-size: 15px;
+		height: 1150px;
+		max-width: 1000px;
+
+		h1 {
+			padding: 35px 0 0;
+			font-size: 1.1rem;
+			color: $Darkgrayblue;
+		}
+	}
+
+	&__results {
+		position: relative;
+		margin: auto;
+		// background-color: #333;
+		width: 300px;
+	}
+
+	&__stat {
+		display: flex;
+		padding: 12px 15px;
+		border-radius: 10px;
+		margin: 10px 0;
+		font-size: 0.8rem;
+
+		h3 {
+			margin-left: 15px;
+		}
+
+		h4 {
+			position: absolute;
+			right: 0;
+			margin-right: 15px;
+			font-size: 1.1rem;
+			color: $Darkgrayblue;
+
+			span {
+				color: $Lightlavender;
+			}
+		}
+		&--red {
+			background-color: hsl(0, 100%, 67%, 0.1);
+			color: $Lightred;
+		}
+
+		&--yellow {
+			background-color: hsla(39, 100%, 56%, 0.1);
+			color: $Orangeyyellow;
+		}
+
+		&--green {
+			background-color: hsl(166, 100%, 37%, 0.1);
+			color: $Greenteal;
+		}
+
+		&--blue {
+			background-color: hsl(234, 85%, 45%, 0.1);
+			color: $Cobaltblue;
+			margin-bottom: 0;
+		}
+	}
+
+	&__continue {
+		display: flex;
+		width: 300px;
+		a {
+			margin: 10px 0;
+			text-decoration: none;
+			background-color: $Darkgrayblue;
+			padding: 3px 10px;
+			color: $Paleblue;
+			font-size: 1rem;
+			width: 300px;
+			border-radius: 25px;
+			text-align: center;
+			padding: 1rem 0;
+		
+
+			&:hover {
+				background: rgb(120, 87, 255);
+				background: linear-gradient(
+					0deg,
+					rgba(120, 87, 255, 1) 0%,
+					rgba(46, 43, 233, 1) 100%
+				);
+			}
+		}
+	}
+}
+
+@import './medium';
